@@ -1,6 +1,5 @@
 <template>
   <div class="get-weather-slide">
-<<<<<<< HEAD
     <div class="get-weather-wrap">
       <div class="title">
         <h3>{{title.toLocaleUpperCase()}}</h3>
@@ -15,7 +14,10 @@
           @keyup.enter="fetchEntredLocationWeather"
         />
         <br />
-        <button :disabled="query.length === 0" @click="fetchEntredLocationWeather">Get {{query}} Weather Now</button>
+        <button
+          :disabled="query.length === 0"
+          @click="fetchEntredLocationWeather"
+        >Get {{query}} Weather Now</button>
       </div>
 
       <div v-if="typeof weather.main != 'undefined'" class="weather-info">
@@ -29,34 +31,6 @@
         </div>
         <div>{{ weather.weather[0].description }}</div>
       </div>
-=======
-    <div class="type-city-wrap">
-      <h3>
-        Just type the city name
-      </h3>
-      <p>You must spelling correctly</p>
-    </div>
-
-    <div class="location-input">
-      <input
-        type="text"
-        placeholder="City"
-        v-model="query"
-        @keyup.enter="fetchEntredLocationWeather"
-      />
-    </div>
-
-    <div v-if="typeof weather.main != 'undefined'" class="weather-info">
-      <div>{{ weather.name }}, {{ weather.sys.country }}</div>
-      <div>{{ weather.weather[0].main }}</div>
-
-      <div>{{ Math.round(weather.main.temp) }}</div>
-      <div>
-        {{ Math.round(weather.main.temp_max) }},
-        {{ Math.round(weather.main.temp_min) }}
-      </div>
-      <div>{{ weather.weather[0].description }}</div>
->>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
     </div>
   </div>
 </template>
@@ -74,14 +48,10 @@ export default {
       coordinates: {
         lat: 0,
         lng: 0
-<<<<<<< HEAD
       },
       title: "Just type the city name",
       note:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-=======
-      }
->>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
     };
   },
 
@@ -135,24 +105,16 @@ export default {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-<<<<<<< HEAD
   padding: 0 5em;
   text-align: center;
 }
 
 .location-form {
   margin: 3em 0;
-=======
-  text-align: center;
-  padding: 2em;
-  background: #111111;
-  color: #fff;
->>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
 }
 
 input {
   width: 50%;
-<<<<<<< HEAD
   padding: 1em;
   margin-bottom: 1em;
   outline: 0;
@@ -186,21 +148,6 @@ button:disabled {
 
 .title p {
   color: #1b9e98;
-=======
-  padding: 0.7em 1em;
-  border: 1px solid #fff;
-  margin: 1em 0;
-  border-radius: 1em;
-  outline: 0;
-}
-
-.type-city-wrap h3 {
-  margin: 1em 0;
-}
-
-.type-city-wrap p {
-  opacity: 0.6;
->>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
   margin: 1em 0;
 }
 
