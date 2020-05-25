@@ -12,16 +12,24 @@
             <div class="back-layer">
               <div class="back-text">
                 <h3 class="big-transparent-text">
+<<<<<<< HEAD
                   Mohamed
                 </h3>
                 <h3 class="big-transparent-text">
                   Khaled
+=======
+                  DES
+                </h3>
+                <h3 class="big-transparent-text">
+                  IGN
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
                 </h3>
               </div>
 
               <div class="overlay-layer">
                 <div class="front-right-text">
                   <h3>
+<<<<<<< HEAD
                     Get
                     <span class="dot"></span>
                   </h3>
@@ -30,6 +38,16 @@
                   </h3>
                   <h3>
                     Weather
+=======
+                    Hello
+                    <span class="dot"></span>
+                  </h3>
+                  <h3>
+                    I am
+                  </h3>
+                  <h3>
+                    Mohamed
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
                   </h3>
                 </div>
 
@@ -87,6 +105,10 @@ export default {
 
 .slider {
   height: 100vh;
+<<<<<<< HEAD
+=======
+  background: #111111;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
 }
 
 .slider {
@@ -98,6 +120,7 @@ export default {
 }
 
 .hooper-pagination.is-vertical .hooper-indicator {
+<<<<<<< HEAD
   width: 35px;
   height: 7px;
 }
@@ -114,6 +137,9 @@ export default {
 
 .hooper-indicator:hover, .hooper-indicator.is-active {
   background: #ff4500;
+=======
+  width: 15px;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
 }
 
 .back-layer {
@@ -121,9 +147,15 @@ export default {
 }
 
 .big-transparent-text {
+<<<<<<< HEAD
   color: #1b9e98;
   font-size: 19em;
   padding: 1rem 0 0 5rem;
+=======
+  color: #333;
+  font-size: 19em;
+  padding: 1rem 0 0 20rem;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
   opacity: 0.1;
 }
 
@@ -148,19 +180,35 @@ export default {
 
 .front-right-text h3 {
   font-size: 8em;
+<<<<<<< HEAD
   text-transform: uppercase;
+=======
+  color: #f0f8ff;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
 }
 
 .front-left-text {
   left: 13%;
   transform: rotate(270deg);
+<<<<<<< HEAD
+=======
+  opacity: 0.3;
+}
+
+.front-left-text p {
+  color: #f0f8ff;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
 }
 
 .dot {
   display: inline-block;
   width: 1rem;
   height: 1rem;
+<<<<<<< HEAD
   background: #ff4500;
+=======
+  background: orangered;
+>>>>>>> ffbae9f56e242a286f166f580b154bd9b479609c
   border-radius: 50%;
 }
 
