@@ -79,6 +79,7 @@ export default {
 
 .slider {
   height: 100vh;
+  background: #111;
 }
 
 .slider {
@@ -127,6 +128,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: #fff;
 }
 
 .front-right-text {

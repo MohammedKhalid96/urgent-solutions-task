@@ -116,10 +116,24 @@ export default {
   transform: translate(-50%, -50%);
   width: 90%;
   padding: 0 1em;
+  color: #fff;
 }
 
 .location-form {
   margin: 2em 0;
+}
+
+.theme--light.v-label {
+  color: #fff !important;
+}
+
+.theme--light.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+  color: #fff !important;
+}
+
+.theme--light.v-text-field > .v-input__control > .v-input__slot:before {
+  border-color: #ff4500 !important;
+  opacity: 0.3;
 }
 
 .title h3 {

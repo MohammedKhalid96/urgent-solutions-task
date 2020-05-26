@@ -11,7 +11,7 @@ export default {
 
 <style scoped>
 .big-transparent-text {
-  color: #1b9e98;
+  color: #1b9e9850;
   font-size: 17em;
   padding: 0 0 0 5rem;
   opacity: 0.1;
