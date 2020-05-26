@@ -124,15 +124,19 @@ input {
   opacity: 0.3;
 }
 
-.title h3 {
-  font-size: 1.5em;
-}
-
 .weather-info div {
   display: inline;
   margin-right: 1.5em;
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media (min-width: 320px) and (max-width: 767px) { 
+  .weather-info div {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
 }
 </style>

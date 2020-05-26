@@ -263,5 +263,9 @@ export default {
   .circle {
     opacity: 0.1;
   }
+
+  .circle-3 {
+    bottom: 0;
+  }
 }
 </style>

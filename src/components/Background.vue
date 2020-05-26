@@ -28,7 +28,7 @@ export default {
 @media (min-width: 320px) and (max-width: 767px) {
   .big-transparent-text {
     font-size: 10em;
-    opacity: 0.3;
+    opacity: 0.1;
     padding: 1rem 0 0 5rem;
   }
 }
