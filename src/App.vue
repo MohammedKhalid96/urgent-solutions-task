@@ -1,23 +1,16 @@
 <template>
-  <div id="app">
+  <v-app>
     <div class="slider">
-      <hooper
-        :vertical="true"
-        style="height: 100%"
-        :itemsToShow="1"
-        :centerMode="true"
-      >
+      <hooper :vertical="true" style="height: 100%" :itemsToShow="1" :centerMode="true">
         <slide>
           <div class="first-slide">
             <div class="back-layer">
-              <div class="back-text">
-                <h3 class="big-transparent-text">
-                  Mohamed
-                </h3>
-                <h3 class="big-transparent-text">
-                  Khaled
-                </h3>
-              </div>
+              <Background>
+                <div class="back-text">
+                  <h3 class="big-transparent-text">Mohamed</h3>
+                  <h3 class="big-transparent-text">Khaled</h3>
+                </div>
+              </Background>
 
               <div class="overlay-layer">
                 <div class="front-right-text">
@@ -25,18 +18,15 @@
                     Get
                     <span class="dot"></span>
                   </h3>
-                  <h3>
-                    The 
-                  </h3>
-                  <h3>
-                    Weather
-                  </h3>
+                  <h3>The</h3>
+                  <h3>Weather</h3>
                 </div>
 
                 <div class="front-left-text">
                   <p>
-                    Lorem ipsum dolor sit, amet<br />
-                    elitprehenderit quo e <br />aliquam deserunt quod.
+                    Lorem ipsum dolor sit, amet
+                    <br />elitprehenderit quo e
+                    <br />aliquam deserunt quod.
                   </p>
                 </div>
               </div>
@@ -58,7 +48,7 @@
         <hooper-pagination slot="hooper-addons"></hooper-pagination>
       </hooper>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -66,6 +56,7 @@ import { Hooper, Slide, Pagination as HooperPagination } from "hooper";
 import "hooper/dist/hooper.css";
 
 import GetWeather from "./components/GetWeather";
+import Background from "./components/Background";
 
 export default {
   name: "App",
@@ -73,6 +64,7 @@ export default {
     Hooper,
     Slide,
     HooperPagination,
+    Background,
     GetWeather
   }
 };
@@ -106,25 +98,20 @@ export default {
   width: 50px;
 }
 
-.hooper-indicator:hover, .hooper-indicator {
+.hooper-indicator:hover,
+.hooper-indicator {
   background: #0527e6;
   outline: none;
   border: 0;
 }
 
-.hooper-indicator:hover, .hooper-indicator.is-active {
+.hooper-indicator:hover,
+.hooper-indicator.is-active {
   background: #ff4500;
 }
 
 .back-layer {
   position: relative;
-}
-
-.big-transparent-text {
-  color: #1b9e98;
-  font-size: 19em;
-  padding: 1rem 0 0 5rem;
-  opacity: 0.1;
 }
 
 .overlay-layer {
@@ -177,8 +164,8 @@ export default {
 .circle-1 {
   width: 3em;
   height: 3em;
-  bottom: 32.7%;
-  left: 13%;
+  bottom: 32.6%;
+  left: 12%;
   opacity: 0.9;
 }
 
@@ -195,7 +182,7 @@ export default {
   width: 2.5em;
   height: 2.5em;
   bottom: 20%;
-  left: 35%;
+  left: 33%;
 }
 
 .circle-4 {
@@ -206,7 +193,7 @@ export default {
   opacity: 0.8;
 }
 
-@media (min-width: 992px) and (max-width: 1183px) { 
+@media (min-width: 992px) and (max-width: 1183px) {
   .front-left-text {
     left: 0;
   }
@@ -219,12 +206,6 @@ export default {
 
   .overlay-layer {
     position: static;
-  }
-
-  .big-transparent-text {
-    font-size: 20em;
-    opacity: 0.3;
-    padding: 1rem 0 0 5rem;
   }
 
   .front-right-text,
@@ -257,12 +238,6 @@ export default {
 
   .overlay-layer {
     position: static;
-  }
-
-  .big-transparent-text {
-    font-size: 10em;
-    opacity: 0.3;
-    padding: 1rem 0 0 5rem;
   }
 
   .front-right-text,
