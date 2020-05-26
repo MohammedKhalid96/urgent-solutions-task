@@ -8,31 +8,23 @@
         </div>
       </Background>
 
-      <div class="get-weather-wrap text-center">
+      <div class="get-weather-wrap">
         <div class="location-form">
           <v-text-field
+            class="d-inline"
             type="text"
-            label="Enter the city name - You must spelling correctly"
+            label="Enter the city name and press enter - You must spelling correctly"
             v-model="query"
             @keyup.enter="fetchEntredLocationWeather"
           ></v-text-field>
-          <br />
-          <v-btn
-            color="primary"
-            :disabled="query.length === 0"
-            @click="fetchEntredLocationWeather"
-          >Get {{query}} Weather Now</v-btn>
         </div>
 
         <div v-if="typeof weather.main != 'undefined'" class="weather-info">
-          <div class="city">{{ weather.name }}, {{ weather.sys.country }}</div>
+          <div>{{ weather.name }}, {{ weather.sys.country }}</div>
           <div>{{ weather.weather[0].main }}</div>
 
           <div>{{ Math.round(weather.main.temp) }} °</div>
-          <div>
-            {{ Math.round(weather.main.temp_max) }} °
-            {{ Math.round(weather.main.temp_min) }} °
-          </div>
+
           <div>{{ weather.weather[0].description }}</div>
           <div v-if="weather.weather[0].description === 'clear sky'" class="weater-description"></div>
         </div>
@@ -112,10 +104,9 @@ export default {
 .get-weather-wrap {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translateY(-50%);
   width: 90%;
-  padding: 0 1em;
   color: #fff;
 }
 
@@ -123,11 +114,8 @@ export default {
   margin: 2em 0;
 }
 
-.theme--light.v-label {
-  color: #fff !important;
-}
-
-.theme--light.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+.theme--light.v-label,
+input {
   color: #fff !important;
 }
 
@@ -141,12 +129,10 @@ export default {
 }
 
 .weather-info div {
-  margin: 1em 0;
-}
-
-.city {
-  font-size: 1.3em;
+  display: inline;
+  margin-right: 1.5em;
+  font-size: 3.5em;
   font-weight: bold;
-  color: #ff4500;
+  text-transform: uppercase;
 }
 </style>
