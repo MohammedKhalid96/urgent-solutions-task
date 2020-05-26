@@ -3,7 +3,6 @@
     <div class="get-weather-wrap">
       <div class="title">
         <h3>{{title.toLocaleUpperCase()}}</h3>
-        <p>{{note}}</p>
       </div>
 
       <div class="location-form">
@@ -21,15 +20,18 @@
       </div>
 
       <div v-if="typeof weather.main != 'undefined'" class="weather-info">
-        <div>{{ weather.name }}, {{ weather.sys.country }}</div>
+        <div class="city">{{ weather.name }}, {{ weather.sys.country }}</div>
         <div>{{ weather.weather[0].main }}</div>
 
-        <div>{{ Math.round(weather.main.temp) }}</div>
+        <div>{{ Math.round(weather.main.temp) }} °</div>
         <div>
-          {{ Math.round(weather.main.temp_max) }},
-          {{ Math.round(weather.main.temp_min) }}
+          {{ Math.round(weather.main.temp_max) }} ° 
+          {{ Math.round(weather.main.temp_min) }} °
         </div>
         <div>{{ weather.weather[0].description }}</div>
+        <div v-if="weather.weather[0].description === 'clear sky'" class="weater-description">
+          
+        </div>
       </div>
     </div>
   </div>
@@ -50,8 +52,6 @@ export default {
         lng: 0
       },
       title: "Just type the city name",
-      note:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
     };
   },
 
@@ -110,7 +110,7 @@ export default {
 }
 
 .location-form {
-  margin: 3em 0;
+  margin: 2em 0;
 }
 
 input {
@@ -143,15 +143,16 @@ button:disabled {
 }
 
 .title h3 {
-  font-size: 2em;
-}
-
-.title p {
-  color: #1b9e98;
-  margin: 1em 0;
+  font-size: 1.5em;
 }
 
 .weather-info div {
   margin: 1em 0;
+}
+
+.city {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ff4500;
 }
 </style>
